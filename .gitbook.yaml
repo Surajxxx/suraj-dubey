@@ -1,0 +1,38 @@
+root: .
+structure:
+  readme: README.md
+  summary: SUMMARY.md
+  glossary: GLOSSARY.md
+  languages: LANGS.md
+
+plugins:
+  - search
+  - highlight
+  - sharing
+  - fontsettings
+  - theme-default
+  - copy-code-button
+
+pluginsConfig:
+  search:
+    maxSearchResults: 20
+  sharing:
+    facebook: true
+    twitter: true
+    google: false
+    weibo: false
+    instapaper: false
+    vk: false
+    all: ['facebook', 'gitbook', 'twitter', 'weibo', 'instapaper']
+  fontsettings:
+    theme: 'white'
+    family: 'sans'
+    size: 2
+  theme-default:
+    showLevel: true
+    styles:
+      website: 'styles/website.css'
+      pdf: 'styles/pdf.css'
+      epub: 'styles/epub.css'
+      mobi: 'styles/mobi.css'
+      ebook: 'styles/ebook.css'

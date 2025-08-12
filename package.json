@@ -1,14 +1,26 @@
 {
-  "name": "portfolio-site",
+  "name": "suraj-dubey-portfolio",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "Portfolio website for Suraj Dubey - Senior Backend Engineer",
+  "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "python3 -m http.server 8000",
+    "dev": "python3 -m http.server 8000",
+    "build": "echo 'Static site - no build required'",
+    "test": "echo 'No tests specified' && exit 0"
   },
-  "author": "",
-  "license": "ISC",
-  "description": "",
-  "dependencies": {
-    "react": "^19.1.1"
+  "keywords": [
+    "portfolio",
+    "backend-engineer",
+    "suraj-dubey",
+    "gitbook-compatible"
+  ],
+  "author": "Suraj Dubey",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/suraj-dubey-portfolio.git"
   }
 }
