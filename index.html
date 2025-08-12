@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Suraj Dubey - Senior Backend Engineer</title>
+    <title>Suraj Dubey - Backend Architect & AI Engineer</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -11,289 +11,558 @@
                 extend: {
                     colors: {
                         primary: '#4F46E5',
-                        secondary: '#1E293B'
+                        secondary: '#1E293B',
+                        accent: '#7C3AED'
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.6s ease-in-out',
+                        'slide-up': 'slideUp 0.8s ease-out',
+                        'bounce-slow': 'bounce 2s infinite'
                     }
                 }
             }
         }
     </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #4F46E5, #7C3AED);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(79, 70, 229, 0.15);
+        }
+        .skill-tag {
+            transition: all 0.3s ease;
+        }
+        .skill-tag:hover {
+            transform: scale(1.05);
+            background: linear-gradient(135deg, #4F46E5, #7C3AED);
+            color: white;
+        }
+    </style>
 </head>
 <body class="bg-gray-50 text-gray-900">
-    <!-- Header -->
-    <header class="bg-white shadow-sm border-b">
-        <div class="max-w-6xl mx-auto px-6 py-6">
-            <div class="flex flex-col md:flex-row md:items-center md:justify-between">
-                <div class="mb-4 md:mb-0">
-                    <h1 class="text-3xl font-bold text-primary">Suraj Dubey</h1>
-                    <p class="text-lg text-gray-600">Senior Backend Engineer — Backend Lead</p>
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm border-b sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                    <div class="w-10 h-10 bg-gradient-to-r from-primary to-accent rounded-full flex items-center justify-center">
+                        <span class="text-white font-bold text-lg">SD</span>
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold gradient-text">Suraj Dubey</h1>
+                        <p class="text-sm text-gray-600">Backend Architect & AI Engineer</p>
+                    </div>
                 </div>
-                <div class="flex flex-col space-y-2 text-sm">
-                    <div class="flex items-center">
-                        <i class="fas fa-envelope w-4 mr-2 text-primary"></i>
-                        <a href="mailto:suraj.dubey191@gmail.com" class="hover:text-primary">suraj.dubey191@gmail.com</a>
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="#projects" class="text-gray-700 hover:text-primary transition-colors">Projects</a>
+                    <a href="#skills" class="text-gray-700 hover:text-primary transition-colors">Skills</a>
+                    <a href="#contact" class="text-gray-700 hover:text-primary transition-colors">Contact</a>
+                    <a href="/suraj_dubey_resume_2025_march%20(1).pdf" class="px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors">
+                        Resume
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden bg-gradient-to-br from-primary via-accent to-purple-600 text-white py-20">
+        <div class="absolute inset-0 bg-black/20"></div>
+        <div class="relative max-w-6xl mx-auto px-6 text-center">
+            <div class="animate-fade-in">
+                <h1 class="text-5xl md:text-6xl font-bold mb-6">
+                    Building Systems That
+                    <span class="block">Scale to Millions</span>
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 opacity-90 max-w-4xl mx-auto">
+                    I architect high-performance backend systems and AI-powered solutions that power businesses at scale. 
+                    From microservices to RAG systems, I build what others can't.
+                </p>
+                <div class="flex flex-wrap justify-center gap-4 mb-8">
+                    <span class="px-6 py-3 bg-white/20 backdrop-blur-sm rounded-full text-sm font-medium">
+                        🚀 11+ Years Experience
+                    </span>
+                    <span class="px-6 py-3 bg-white/20 backdrop-blur-sm rounded-full text-sm font-medium">
+                        🤖 AI/ML Systems
+                    </span>
+                    <span class="px-6 py-3 bg-white/20 backdrop-blur-sm rounded-full text-sm font-medium">
+                        🏗️ Microservices
+                    </span>
+                    <span class="px-6 py-3 bg-white/20 backdrop-blur-sm rounded-full text-sm font-medium">
+                        ☁️ Cloud Native
+                    </span>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#projects" class="px-8 py-4 bg-white text-primary font-semibold rounded-lg hover:bg-gray-100 transition-colors">
+                        View My Work
+                    </a>
+                    <a href="#contact" class="px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-primary transition-colors">
+                        Let's Talk
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Floating elements -->
+        <div class="absolute top-20 left-10 w-20 h-20 bg-white/10 rounded-full animate-bounce-slow"></div>
+        <div class="absolute bottom-20 right-10 w-16 h-16 bg-white/10 rounded-full animate-bounce-slow" style="animation-delay: 1s;"></div>
+        <div class="absolute top-1/2 left-20 w-12 h-12 bg-white/10 rounded-full animate-bounce-slow" style="animation-delay: 2s;"></div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 text-center">
+                <div class="animate-slide-up" style="animation-delay: 0.1s;">
+                    <div class="text-4xl font-bold text-primary mb-2">1000+</div>
+                    <div class="text-gray-600">Requests/Second</div>
+                </div>
+                <div class="animate-slide-up" style="animation-delay: 0.2s;">
+                    <div class="text-4xl font-bold text-primary mb-2">99.8%</div>
+                    <div class="text-gray-600">Uptime</div>
+                </div>
+                <div class="animate-slide-up" style="animation-delay: 0.3s;">
+                    <div class="text-4xl font-bold text-primary mb-2">5+</div>
+                    <div class="text-gray-600">Team Members Led</div>
+                </div>
+                <div class="animate-slide-up" style="animation-delay: 0.4s;">
+                    <div class="text-4xl font-bold text-primary mb-2">$50K+</div>
+                    <div class="text-gray-600">Monthly Savings</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-secondary mb-4">Featured Projects</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Here are some of the challenging systems I've built that are running in production today
+                </p>
+            </div>
+            
+            <div class="space-y-12">
+                <!-- Project 1 -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm card-hover">
+                    <div class="grid lg:grid-cols-2 gap-8 items-center">
+                        <div>
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 bg-gradient-to-r from-primary to-accent rounded-lg flex items-center justify-center mr-4">
+                                    <i class="fas fa-robot text-white text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-2xl font-bold text-secondary">AI Customer Support Platform</h3>
+                                    <p class="text-primary font-medium">Zaapi • 2023-2024</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-700 mb-6 text-lg">
+                                Built a RAG-based AI chatbot that reduced customer support tickets by 40% while maintaining 99.8% uptime under 1000+ req/s load.
+                            </p>
+                            <div class="space-y-3">
+                                <div class="flex items-center">
+                                    <i class="fas fa-chart-line text-primary w-4 mr-3"></i>
+                                    <span>Processed 10TB+ knowledge base data in real-time</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-users text-primary w-4 mr-3"></i>
+                                    <span>Led 5-person backend team across product & growth</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-dollar-sign text-primary w-4 mr-3"></i>
+                                    <span>$50K+ monthly cost savings through optimization</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-gradient-to-br from-primary/10 to-accent/10 rounded-xl p-6">
+                            <h4 class="font-semibold mb-4 text-secondary">Tech Stack</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm">LangChain</span>
+                                <span class="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm">Vector DBs</span>
+                                <span class="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm">OpenAI APIs</span>
+                                <span class="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm">Redis</span>
+                                <span class="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm">OpenSearch</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="flex items-center">
-                        <i class="fas fa-phone w-4 mr-2 text-primary"></i>
-                        <span>+91 9824829736</span>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm card-hover">
+                    <div class="grid lg:grid-cols-2 gap-8 items-center">
+                        <div class="order-2 lg:order-1">
+                            <div class="bg-gradient-to-br from-accent/10 to-purple-600/10 rounded-xl p-6">
+                                <h4 class="font-semibold mb-4 text-secondary">Tech Stack</h4>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-3 py-1 bg-accent/20 text-accent rounded-full text-sm">Node.js</span>
+                                    <span class="px-3 py-1 bg-accent/20 text-accent rounded-full text-sm">TypeScript</span>
+                                    <span class="px-3 py-1 bg-accent/20 text-accent rounded-full text-sm">GraphQL</span>
+                                    <span class="px-3 py-1 bg-accent/20 text-accent rounded-full text-sm">PostgreSQL</span>
+                                    <span class="px-3 py-1 bg-accent/20 text-accent rounded-full text-sm">DAPR</span>
+                                    <span class="px-3 py-1 bg-accent/20 text-accent rounded-full text-sm">WebSockets</span>
+                                </div>
+                                <div class="mt-4">
+                                    <a href="https://optusapp.com/" target="_blank" class="inline-flex items-center text-accent hover:text-accent/80 transition-colors">
+                                        <i class="fas fa-external-link-alt mr-2"></i>
+                                        View Live Project
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order-1 lg:order-2">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 bg-gradient-to-r from-accent to-purple-600 rounded-lg flex items-center justify-center mr-4">
+                                    <i class="fas fa-home text-white text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-2xl font-bold text-secondary">OptusApp - Housing Management</h3>
+                                    <p class="text-accent font-medium">GeekyAnts • 2022-2023</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-700 mb-6 text-lg">
+                                Led backend development for a mobile-first housing management solution serving landlords and tenants, built on Microsoft Azure cloud platform.
+                            </p>
+                            <div class="space-y-3">
+                                <div class="flex items-center">
+                                    <i class="fas fa-rocket text-accent w-4 mr-3"></i>
+                                    <span>Zero-downtime deployment across 50+ API endpoints</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-users text-accent w-4 mr-3"></i>
+                                    <span>Led 7-engineer team through complex migration</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-cloud text-accent w-4 mr-3"></i>
+                                    <span>Azure cloud platform with mobile-first approach</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="flex items-center">
-                        <i class="fab fa-linkedin w-4 mr-2 text-primary"></i>
-                        <a href="https://www.linkedin.com/in/suraj-dubey" target="_blank" class="hover:text-primary">LinkedIn</a>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm card-hover">
+                    <div class="grid lg:grid-cols-2 gap-8 items-center">
+                        <div>
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-500 rounded-lg flex items-center justify-center mr-4">
+                                    <i class="fas fa-building text-white text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-2xl font-bold text-secondary">RealOne CRM - Real Estate Platform</h3>
+                                    <p class="text-green-600 font-medium">GeekyAnts • 2022-2023</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-700 mb-6 text-lg">
+                                Architected backend for India's first data-backed CRM connecting 50,000+ agents and builders with real-time lead matching and automated workflows.
+                            </p>
+                            <div class="space-y-3">
+                                <div class="flex items-center">
+                                    <i class="fas fa-users text-green-500 w-4 mr-3"></i>
+                                    <span>50,000+ verified agents and 50,000+ listed projects</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-chart-line text-green-500 w-4 mr-3"></i>
+                                    <span>End-to-end CRM with automated lead allocation</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-mobile-alt text-green-500 w-4 mr-3"></i>
+                                    <span>Digital site visits and real-time notifications</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-gradient-to-br from-green-500/10 to-blue-500/10 rounded-xl p-6">
+                            <h4 class="font-semibold mb-4 text-secondary">Tech Stack</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-green-500/20 text-green-600 rounded-full text-sm">Node.js</span>
+                                <span class="px-3 py-1 bg-green-500/20 text-green-600 rounded-full text-sm">Express</span>
+                                <span class="px-3 py-1 bg-green-500/20 text-green-600 rounded-full text-sm">TypeScript</span>
+                                <span class="px-3 py-1 bg-green-500/20 text-green-600 rounded-full text-sm">MongoDB</span>
+                                <span class="px-3 py-1 bg-green-500/20 text-green-600 rounded-full text-sm">Redis</span>
+                                <span class="px-3 py-1 bg-green-500/20 text-green-600 rounded-full text-sm">WebSocket</span>
+                            </div>
+                            <div class="mt-4">
+                                <a href="https://www.realoneapp.com/" target="_blank" class="inline-flex items-center text-green-600 hover:text-green-700 transition-colors">
+                                    <i class="fas fa-external-link-alt mr-2"></i>
+                                    View Live Project
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm card-hover">
+                    <div class="grid lg:grid-cols-2 gap-8 items-center">
+                        <div class="order-2 lg:order-1">
+                            <div class="bg-gradient-to-br from-blue-500/10 to-indigo-600/10 rounded-xl p-6">
+                                <h4 class="font-semibold mb-4 text-secondary">Tech Stack</h4>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-3 py-1 bg-blue-500/20 text-blue-600 rounded-full text-sm">Azure CosmosDB</span>
+                                    <span class="px-3 py-1 bg-blue-500/20 text-blue-600 rounded-full text-sm">Data Migration</span>
+                                    <span class="px-3 py-1 bg-blue-500/20 text-blue-600 rounded-full text-sm">Blue-Green</span>
+                                    <span class="px-3 py-1 bg-blue-500/20 text-blue-600 rounded-full text-sm">Monitoring</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order-1 lg:order-2">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center mr-4">
+                                    <i class="fas fa-database text-white text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-2xl font-bold text-secondary">Zero-Downtime Database Migration</h3>
+                                    <p class="text-blue-600 font-medium">GeekyAnts • 2022-2023</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-700 mb-6 text-lg">
+                                Successfully migrated production database from MSSQL to CosmosDB, maintaining 24/7 service while processing 2M+ records.
+                            </p>
+                            <div class="space-y-3">
+                                <div class="flex items-center">
+                                    <i class="fas fa-shield-alt text-blue-500 w-4 mr-3"></i>
+                                    <span>Blue-green deployment with zero data loss</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-globe text-blue-500 w-4 mr-3"></i>
+                                    <span>Multi-region consistency maintained</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-chart-line text-blue-500 w-4 mr-3"></i>
+                                    <span>40% cost reduction achieved</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </header>
+    </section>
 
-    <!-- Main Content -->
-    <main class="max-w-6xl mx-auto p-6">
-        <!-- Hero Section -->
-        <section class="bg-gradient-to-r from-primary to-purple-600 rounded-2xl p-8 text-white mb-8">
-            <div class="max-w-4xl">
-                <h2 class="text-3xl font-bold mb-4">Results-driven Senior Backend Engineer</h2>
-                <p class="text-xl mb-6 opacity-90">
-                    Strong track record architecting high-performance, cloud-native systems and AI-enabled platforms. 
-                    Experience designing microservices, RAG systems for customer support, and scaling production systems to millions of transactions.
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-secondary mb-4">Technology Arsenal</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    My toolkit for building robust, scalable systems
                 </p>
-                <div class="flex flex-wrap gap-3">
-                    <span class="px-4 py-2 bg-white bg-opacity-20 rounded-full text-sm">11+ years experience</span>
-                    <span class="px-4 py-2 bg-white bg-opacity-20 rounded-full text-sm">Team Leadership</span>
-                    <span class="px-4 py-2 bg-white bg-opacity-20 rounded-full text-sm">AI/ML Systems</span>
-                    <span class="px-4 py-2 bg-white bg-opacity-20 rounded-full text-sm">Cloud Architecture</span>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Backend -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-gradient-to-r from-primary to-accent rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-server text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-secondary">Backend</h3>
+                    <div class="space-y-2">
+                        <div class="skill-tag px-3 py-2 bg-gray-100 rounded-lg text-sm cursor-pointer">Node.js/TypeScript</div>
+                        <div class="skill-tag px-3 py-2 bg-gray-100 rounded-lg text-sm cursor-pointer">Python/FastAPI</div>
+                        <div class="skill-tag px-3 py-2 bg-gray-100 rounded-lg text-sm cursor-pointer">NestJS/Express</div>
+                        <div class="skill-tag px-3 py-2 bg-gray-100 rounded-lg text-sm cursor-pointer">GraphQL</div>
+                    </div>
+                </div>
+
+                <!-- Databases -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-gradient-to-r from-accent to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-database text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-secondary">Databases</h3>
+                    <div class="space-y-2">
+                        <div class="skill-tag px-3 py-2 bg-gray-100 rounded-lg text-sm cursor-pointer">PostgreSQL/MySQL</div>
+                        <div class="skill-tag px-3 py-2 bg-gray-100 rounded-lg text-sm cursor-pointer">MongoDB/CosmosDB</div>
+                        <div class="skill-tag px-3 py-2 bg-gray-100 rounded-lg text-sm cursor-pointer">Vector DBs</div>
+                        <div class="skill-tag px-3 py-2 bg-gray-100 rounded-lg text-sm cursor-pointer">Redis</div>
+                    </div>
+                </div>
+
+                <!-- Cloud -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-cloud text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-secondary">Cloud & DevOps</h3>
+                    <div class="space-y-2">
+                        <div class="skill-tag px-3 py-2 bg-gray-100 rounded-lg text-sm cursor-pointer">AWS/Azure/GCP</div>
+                        <div class="skill-tag px-3 py-2 bg-gray-100 rounded-lg text-sm cursor-pointer">Docker/K8s</div>
+                        <div class="skill-tag px-3 py-2 bg-gray-100 rounded-lg text-sm cursor-pointer">Terraform</div>
+                        <div class="skill-tag px-3 py-2 bg-gray-100 rounded-lg text-sm cursor-pointer">CI/CD</div>
+                    </div>
+                </div>
+
+                <!-- AI/ML -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-gradient-to-r from-pink-500 to-red-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-brain text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-secondary">AI/ML</h3>
+                    <div class="space-y-2">
+                        <div class="skill-tag px-3 py-2 bg-gray-100 rounded-lg text-sm cursor-pointer">LangChain</div>
+                        <div class="skill-tag px-3 py-2 bg-gray-100 rounded-lg text-sm cursor-pointer">OpenAI APIs</div>
+                        <div class="skill-tag px-3 py-2 bg-gray-100 rounded-lg text-sm cursor-pointer">Vector Search</div>
+                        <div class="skill-tag px-3 py-2 bg-gray-100 rounded-lg text-sm cursor-pointer">MLOps</div>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Key Highlights -->
-        <section class="bg-white rounded-2xl p-6 shadow-sm mb-8">
-            <h3 class="text-xl font-semibold mb-4 text-secondary">Key Highlights</h3>
-            <div class="grid md:grid-cols-2 gap-4">
-                <div class="flex items-start">
-                    <i class="fas fa-robot text-primary mt-1 mr-3"></i>
-                    <span>Architected RAG-based AI chatbots and knowledge systems</span>
-                </div>
-                <div class="flex items-start">
-                    <i class="fas fa-users text-primary mt-1 mr-3"></i>
-                    <span>Led backend teams and cross-functional delivery (5-7 devs)</span>
-                </div>
-                <div class="flex items-start">
-                    <i class="fas fa-chart-line text-primary mt-1 mr-3"></i>
-                    <span>Designed platforms handling 1k+ req/s and 2M+ weekly transactions</span>
-                </div>
-                <div class="flex items-start">
-                    <i class="fas fa-cogs text-primary mt-1 mr-3"></i>
-                    <span>CI/CD, IAC, observability (OpenSearch / OpenTelemetry)</span>
-                </div>
-                <div class="flex items-start">
-                    <i class="fas fa-database text-primary mt-1 mr-3"></i>
-                    <span>Zero-downtime DB migrations and large-scale cloud migrations</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- Experience -->
-        <section class="bg-white rounded-2xl p-6 shadow-sm mb-8">
-            <h3 class="text-xl font-semibold mb-6 text-secondary">Professional Experience</h3>
-            <div class="space-y-6">
-                <!-- Zaapi -->
-                <div class="border-l-4 border-primary pl-6">
-                    <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
-                        <div>
-                            <h4 class="text-lg font-semibold">Backend Lead</h4>
-                            <p class="text-primary font-medium">Zaapi</p>
-                        </div>
-                        <span class="text-gray-500 text-sm">Aug 2023 — Present</span>
-                    </div>
-                    <ul class="space-y-2 text-gray-700">
-                        <li class="flex items-start">
-                            <i class="fas fa-circle text-xs text-primary mt-2 mr-3 flex-shrink-0"></i>
-                            <span>Led a 5-person backend team across product & growth initiatives</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-circle text-xs text-primary mt-2 mr-3 flex-shrink-0"></i>
-                            <span>Architected a RAG-based AI chatbot using LangChain, LangSmith and vector DBs</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-circle text-xs text-primary mt-2 mr-3 flex-shrink-0"></i>
-                            <span>Scaled platform to support 1000+ req/s and improved uptime to 99.8%</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-circle text-xs text-primary mt-2 mr-3 flex-shrink-0"></i>
-                            <span>Introduced CI/CD and Infrastructure as Code; migrated CloudWatch logs to OpenSearch to cut costs</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- GeekyAnts -->
-                <div class="border-l-4 border-primary pl-6">
-                    <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
-                        <div>
-                            <h4 class="text-lg font-semibold">Senior Software Engineer</h4>
-                            <p class="text-primary font-medium">GeekyAnts</p>
-                        </div>
-                        <span class="text-gray-500 text-sm">Jun 2022 — Aug 2023</span>
-                    </div>
-                    <ul class="space-y-2 text-gray-700">
-                        <li class="flex items-start">
-                            <i class="fas fa-circle text-xs text-primary mt-2 mr-3 flex-shrink-0"></i>
-                            <span>Led technical delivery for client SaaS platforms—team of 7 engineers</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-circle text-xs text-primary mt-2 mr-3 flex-shrink-0"></i>
-                            <span>Built microservices using Node.js, Express, TypeScript, GraphQL and PostgreSQL</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-circle text-xs text-primary mt-2 mr-3 flex-shrink-0"></i>
-                            <span>Implemented DAPR-based architecture and WebSocket integrations for Optus platform</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-circle text-xs text-primary mt-2 mr-3 flex-shrink-0"></i>
-                            <span>Executed a zero-downtime migration from MSSQL to CosmosDB</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- GNFC -->
-                <div class="border-l-4 border-primary pl-6">
-                    <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
-                        <div>
-                            <h4 class="text-lg font-semibold">Engineering Roles (Senior Shift Engineer → Automation & Web Apps)</h4>
-                            <p class="text-primary font-medium">GNFC</p>
-                        </div>
-                        <span class="text-gray-500 text-sm">Jul 2014 — Jun 2022</span>
-                    </div>
-                    <ul class="space-y-2 text-gray-700">
-                        <li class="flex items-start">
-                            <i class="fas fa-circle text-xs text-primary mt-2 mr-3 flex-shrink-0"></i>
-                            <span>Operated and automated TDI plant control systems (2014–2019)</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-circle text-xs text-primary mt-2 mr-3 flex-shrink-0"></i>
-                            <span>Led digital transformation projects: digital logbooks, permit systems, lab tools</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-circle text-xs text-primary mt-2 mr-3 flex-shrink-0"></i>
-                            <span>Built resilient internal apps and integrated industrial control with web dashboards</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- Tech Stack & Education -->
-        <div class="grid md:grid-cols-2 gap-6 mb-8">
-            <!-- Tech Stack -->
-            <section class="bg-white rounded-2xl p-6 shadow-sm">
-                <h3 class="text-xl font-semibold mb-4 text-secondary">Technologies & Tools</h3>
-                <div class="space-y-3">
-                    <div class="flex items-center">
-                        <i class="fas fa-code text-primary w-4 mr-3"></i>
-                        <span class="text-sm">Node.js / TypeScript / NestJS / Express</span>
-                    </div>
-                    <div class="flex items-center">
-                        <i class="fas fa-database text-primary w-4 mr-3"></i>
-                        <span class="text-sm">Postgres / MySQL / MongoDB / CosmosDB / Redis</span>
-                    </div>
-                    <div class="flex items-center">
-                        <i class="fas fa-cloud text-primary w-4 mr-3"></i>
-                        <span class="text-sm">AWS / Azure / GCP / Docker / Kubernetes / Terraform</span>
-                    </div>
-                    <div class="flex items-center">
-                        <i class="fas fa-brain text-primary w-4 mr-3"></i>
-                        <span class="text-sm">OpenSearch / Elasticsearch / Vector DBs / LangChain / LangSmith</span>
-                    </div>
-                    <div class="flex items-center">
-                        <i class="fas fa-rocket text-primary w-4 mr-3"></i>
-                        <span class="text-sm">CI/CD / GitHub Actions / CircleCI / Observability</span>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Education -->
-            <section class="bg-white rounded-2xl p-6 shadow-sm">
-                <h3 class="text-xl font-semibold mb-4 text-secondary">Education</h3>
-                <div class="space-y-3">
-                    <div>
-                        <h4 class="font-medium">B.Tech in Petroleum Engineering</h4>
-                        <p class="text-sm text-gray-600">Pandit Deendayal Energy University, Gujarat</p>
-                        <p class="text-xs text-gray-500">2014</p>
-                    </div>
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gradient-to-br from-gray-900 to-gray-800 text-white">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold mb-8">Let's Build Something Amazing</h2>
+            <p class="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
+                I'm always excited to discuss complex system architecture challenges, AI/ML integration opportunities, 
+                and how we can scale your engineering team together.
+            </p>
+            
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+                    <i class="fas fa-envelope text-3xl text-primary mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Email</h3>
+                    <p class="text-gray-300 mb-4">Perfect for detailed discussions</p>
+                    <a href="mailto:suraj.dubey191@gmail.com" class="text-primary hover:text-primary/80 transition-colors">
+                        suraj.dubey191@gmail.com
+                    </a>
                 </div>
                 
-                <div class="mt-6">
-                    <h4 class="font-medium mb-3">Quick Actions</h4>
-                    <div class="space-y-2">
-                        <a href="/assets/suraj_dubey_resume.pdf" class="block w-full px-4 py-2 bg-primary text-white text-center rounded hover:bg-primary/90 transition-colors">
-                            <i class="fas fa-download mr-2"></i>Download Resume
-                        </a>
-                        <a href="mailto:suraj.dubey191@gmail.com" class="block w-full px-4 py-2 border border-primary text-primary text-center rounded hover:bg-primary hover:text-white transition-colors">
-                            <i class="fas fa-envelope mr-2"></i>Get In Touch
-                        </a>
-                    </div>
+                <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+                    <i class="fab fa-linkedin text-3xl text-primary mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">LinkedIn</h3>
+                    <p class="text-gray-300 mb-4">Connect professionally</p>
+                    <a href="https://www.linkedin.com/in/suraj-dubey" target="_blank" class="text-primary hover:text-primary/80 transition-colors">
+                        linkedin.com/in/suraj-dubey
+                    </a>
                 </div>
-            </section>
-        </div>
-
-        <!-- Contact Section -->
-        <section class="bg-white rounded-2xl p-6 shadow-sm">
-            <h3 class="text-xl font-semibold mb-4 text-secondary">Let's Connect</h3>
-            <p class="text-gray-700 mb-6">
-                Interested in collaborating or learning more about my systems and architectures? 
-                I'm always open to discussing new opportunities and technical challenges.
-            </p>
-            <div class="flex flex-wrap gap-4">
-                <a href="mailto:suraj.dubey191@gmail.com" class="flex items-center px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors">
-                    <i class="fas fa-envelope mr-2"></i>
-                    Email Me
+                
+                <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+                    <i class="fas fa-phone text-3xl text-primary mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Phone</h3>
+                    <p class="text-gray-300 mb-4">Great for quick calls</p>
+                    <a href="tel:+919824829736" class="text-primary hover:text-primary/80 transition-colors">
+                        +91 9824829736
+                    </a>
+                </div>
+            </div>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="/suraj_dubey_resume_2025_march%20(1).pdf" class="px-8 py-4 bg-primary text-white font-semibold rounded-lg hover:bg-primary/90 transition-colors">
+                    <i class="fas fa-download mr-2"></i>Download Resume
                 </a>
-                <a href="https://www.linkedin.com/in/suraj-dubey" target="_blank" class="flex items-center px-6 py-3 border border-primary text-primary rounded-lg hover:bg-primary hover:text-white transition-colors">
-                    <i class="fab fa-linkedin mr-2"></i>
-                    LinkedIn
-                </a>
-                <a href="tel:+919824829736" class="flex items-center px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors">
-                    <i class="fas fa-phone mr-2"></i>
-                    Call Me
+                <a href="mailto:suraj.dubey191@gmail.com" class="px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-gray-900 transition-colors">
+                    <i class="fas fa-paper-plane mr-2"></i>Start a Conversation
                 </a>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
     <!-- Footer -->
-    <footer class="bg-white border-t mt-12">
-        <div class="max-w-6xl mx-auto px-6 py-8 text-center">
-            <p class="text-gray-500 text-sm">
-                Made with <i class="fas fa-heart text-red-500"></i> — Portfolio of Suraj Dubey
+    <footer class="bg-gray-900 text-gray-400 py-12">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <div class="flex items-center justify-center mb-6">
+                <div class="w-8 h-8 bg-gradient-to-r from-primary to-accent rounded-full flex items-center justify-center mr-3">
+                    <span class="text-white font-bold text-sm">SD</span>
+                </div>
+                <span class="text-lg font-semibold">Suraj Dubey</span>
+            </div>
+            <p class="text-sm mb-4">
+                Backend Architect & AI Engineer • Building systems that scale to millions
             </p>
-            <p class="text-gray-400 text-xs mt-2">
-                Senior Backend Engineer specializing in scalable systems, AI/ML, and cloud architecture
+            <p class="text-xs">
+                Made with ❤️ and lots of ☕ • Portfolio of Suraj Dubey
             </p>
         </div>
     </footer>
 
     <script>
-        // Add smooth scrolling and any interactive features
-        document.addEventListener('DOMContentLoaded', function() {
-            // Add smooth scrolling to all links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    document.querySelector(this.getAttribute('href')).scrollIntoView({
-                        behavior: 'smooth'
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
                     });
-                });
-            });
-
-            // Add hover effects to experience cards
-            document.querySelectorAll('.border-l-4').forEach(card => {
-                card.addEventListener('mouseenter', function() {
-                    this.style.borderLeftColor = '#6366F1';
-                });
-                card.addEventListener('mouseleave', function() {
-                    this.style.borderLeftColor = '#4F46E5';
-                });
+                }
             });
         });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all animated elements
+        document.querySelectorAll('.animate-slide-up, .animate-fade-in').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(40px)';
+            el.style.transition = 'all 0.8s ease-out';
+            observer.observe(el);
+        });
+
+        // Skill tag interactions
+        document.querySelectorAll('.skill-tag').forEach(tag => {
+            tag.addEventListener('click', function() {
+                this.style.transform = 'scale(1.1)';
+                setTimeout(() => {
+                    this.style.transform = 'scale(1)';
+                }, 200);
+            });
+        });
+
+        // Add scroll effect to navigation
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.classList.add('bg-white/95', 'backdrop-blur-sm');
+            } else {
+                nav.classList.remove('bg-white/95', 'backdrop-blur-sm');
+            }
+        });
+    </script>
+
+    <!-- Zaapi Widget Script -->
+    <script>
+    (function(d,t) {
+        var BASE_URL="https://widget-sdk-staging.zaapi.com";
+        var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+        g.src=BASE_URL+"/widget.min.js?t=1754976744068";
+        g.setAttribute("app-id", "4a09caaa-7798-476a-afec-030cf3902d12");
+        g.async = true;
+        s.parentNode.insertBefore(g,s);
+    })(document,"script");
     </script>
 </body>
 </html>

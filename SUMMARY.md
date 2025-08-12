@@ -4,9 +4,15 @@
 
 ## Professional Experience
 * [Experience Overview](README.md#-professional-experience)
-* [Zaapi - Backend Lead](README.md#backend-lead---zaapi)
-* [GeekyAnts - Senior Software Engineer](README.md#senior-software-engineer---geekyants)
-* [GNFC - Engineering Roles](README.md#engineering-roles---gnfc)
+* [Zaapi - Backend Lead](README.md#-zaapi)
+* [GeekyAnts - Senior Software Engineer](README.md#-geekyants)
+* [GNFC - Engineering Roles](README.md#-gnfc)
+
+## Featured Projects
+* [AI Customer Support Platform](README.md#-zaapi)
+* [OptusApp - Housing Management](README.md#-optusapp---housing-management-platform)
+* [RealOne CRM - Real Estate](README.md#-realone-crm---real-estate-platform)
+* [Database Migration](README.md#-zero-downtime-database-migration)
 
 ## Skills & Technologies
 * [Tech Stack Overview](README.md#-technologies--tools)
