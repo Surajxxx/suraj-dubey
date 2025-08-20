@@ -36,7 +36,7 @@ git push origin main
 7. **Click Save**
 
 ### **Step 3: Your Portfolio is Live!**
-- **URL**: `https://yourusername.github.io/repo-name/`
+- **URL**: `https://surajxxx.github.io/suraj-dubey-portfolio/`
 - **Auto-deploy**: Updates automatically on every push
 - **Custom domain**: Optional (can be added later)
 
@@ -73,8 +73,8 @@ portfolio/
 
 ### **Update URLs**
 Replace these placeholders in your files:
-- `yourusername` → Your actual GitHub username
-- `repo-name` → Your actual repository name
+- `surajxxx` → Your actual GitHub username (already updated)
+- `suraj-dubey-portfolio` → Your actual repository name (already updated)
 
 ### **Colors & Styling**
 - **Primary colors**: Edit CSS variables in `index.html`

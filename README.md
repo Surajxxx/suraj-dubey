@@ -12,7 +12,7 @@ A modern, interactive portfolio website built with HTML, CSS, and JavaScript, op
 
 ## 🚀 Live Demo
 
-**Portfolio Website**: [View Live Portfolio](https://yourusername.github.io/repo-name/)
+**Portfolio Website**: [View Live Portfolio](https://surajxxx.github.io/suraj-dubey-portfolio/)
 
 ## 🛠️ Technologies Used
 
@@ -38,8 +38,8 @@ portfolio/
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/repo-name.git
-   cd repo-name
+   git clone https://github.com/surajxxx/suraj-dubey-portfolio.git
+   cd suraj-dubey-portfolio
    ```
 
 2. **Test locally**
@@ -72,8 +72,8 @@ portfolio/
 
 ## 🔗 Links
 
-- **Portfolio**: [Live Website](https://yourusername.github.io/repo-name/)
-- **GitHub**: [Repository](https://github.com/yourusername/repo-name)
+- **Portfolio**: [Live Website](https://surajxxx.github.io/suraj-dubey-portfolio/)
+- **GitHub**: [Repository](https://github.com/surajxxx/suraj-dubey-portfolio)
 - **Resume**: [Download PDF](/suraj_dubey_resume_2025_march%20(1).pdf)
 
 ## 📞 Contact

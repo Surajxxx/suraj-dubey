@@ -46,7 +46,7 @@ python3 -m http.server 8000
 ## 📱 View Your Portfolio
 
 - **Local**: http://localhost:8000
-- **GitHub Pages**: https://yourusername.github.io/repo-name/
+- **GitHub Pages**: https://surajxxx.github.io/suraj-dubey-portfolio/
 - **GitHub**: Your repository URL
 
 ## 🔧 Customize
