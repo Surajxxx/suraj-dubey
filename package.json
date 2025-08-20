@@ -1,19 +1,22 @@
 {
   "name": "suraj-dubey-portfolio",
   "version": "1.0.0",
-  "description": "Portfolio website for Suraj Dubey - Senior Backend Engineer",
+  "description": "Modern, interactive portfolio website optimized for GitHub Pages",
   "main": "index.html",
   "scripts": {
     "start": "python3 -m http.server 8000",
     "dev": "python3 -m http.server 8000",
     "build": "echo 'Static site - no build required'",
+    "deploy": "echo 'Push to GitHub to deploy to GitHub Pages'",
     "test": "echo 'No tests specified' && exit 0"
   },
   "keywords": [
     "portfolio",
     "backend-engineer",
     "suraj-dubey",
-    "gitbook-compatible"
+    "github-pages",
+    "responsive-design",
+    "interactive-portfolio"
   ],
   "author": "Suraj Dubey",
   "license": "MIT",
@@ -22,5 +25,9 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/yourusername/suraj-dubey-portfolio.git"
+  },
+  "homepage": "https://yourusername.github.io/suraj-dubey-portfolio",
+  "bugs": {
+    "url": "https://github.com/yourusername/suraj-dubey-portfolio/issues"
   }
 }
